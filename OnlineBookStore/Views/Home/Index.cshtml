@@ -20,80 +20,56 @@
                         <div class="card-body bg-light">
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="0">
-                                    Architecture
+                                    <input class="form-check-input" type="radio" name="filters" value="engineering">
+                                    engineering
                                 </label>
                             </div>
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="1">
-                                    Art
+                                    <input class="form-check-input" type="radio" name="filters" value="Arab poetry">
+                                    Arab poetry
                                 </label>
                             </div>
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="2">
-                                    Biography and Autobiography
+                                    <input class="form-check-input" type="radio" name="filters" value="horror">
+                                    horror
                                 </label>
                             </div>
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="3">
-                                    Body, Mind and Spirit
+                                    <input class="form-check-input" type="radio" name="filters" value="romance">
+                                    romance
                                 </label>
                             </div>
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="4">
-                                    Business and Economics
+                                    <input class="form-check-input" type="radio" name="filters" value="religious">
+                                    religious
                                 </label>
                             </div>
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="5">
-                                    Children Fiction
+                                    <input class="form-check-input" type="radio" name="filters" value="politician">
+                                    politician
                                 </label>
                             </div>
                             <div class="form-check mb-2">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="6">
-                                    Children Nonfiction
+                                    <input class="form-check-input" type="radio" name="filters" value="child">
+                                    child
                                 </label>
                             </div>
-                            <div class="form-check mb-2">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="7">
-                                    Comics and Graphic Novels
-                                </label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="8">
-                                    Computers and Internet
-                                </label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="9">
-                                    Cooking and Food
-                                </label>
-                            </div>
-                            <div class="form-check mb-2">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="filters" value="10">
-                                    Crafts and Hobbies
-                                </label>
-                            </div>
-                            <button type="submit" name="btnApply" class="btn btn-light btn-sm mt-2 ">
+                            @*<button type="submit" name="btnApply" class="btn btn-light btn-sm mt-2 ">
                                 <i class="fa fa-filter"></i>
                                 Apply
-                            </button>
+                            </button>*@
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-        <form action="" class="mt-2" method="" role="">
+        <div class="mt-2">
             <div class="accordion" id="accordionExample">
                 <div class="card ">
                     <div class="card-header p-0" id="headingTwo" type="button" data-toggle="collapse"
@@ -121,7 +97,7 @@
                                     <span class="qty-down">-</span>
                                 </div>
                             </div>
-                            <button type="submit" name="btnApply" class="btn btn-light btn-sm mt-2">
+                            <button name="btnApply" class="btn btn-light btn-sm mt-2">
                                 <i class="fa fa-filter"></i>
                                 Apply
                             </button>
@@ -129,7 +105,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
         <!-- /aside Widget -->
     </div>
     <!-- /ASIDE -->
@@ -196,3 +172,29 @@
     </div>
     <!-- /STORE -->
 </div>
+<script>
+    const cardCategories = document.querySelector('div.card-body')
+
+    cardCategories.addEventListener('click', function (event) {
+
+        //if (event.target.classList.classList.contains('form-check')) {
+            const element = event.target;
+            //console.log(element.value);
+
+            window.location.replace(`filterbycatogery?cat=${element.value}`);
+        //}
+
+    });
+
+
+    const cardPrice = document.querySelectorAll('div.card-body')[1];
+    const btnApplay = document.querySelectorAll('button.btn.btn')[0];
+    const btnMin = document.querySelector('#price-min');
+    const btnMax = document.querySelector('#price-max');
+
+    btnApplay.addEventListener('click', function (event) {
+        console.log('my event lisner');
+        window.location.replace(`filterbyprice?max=${btnMax.value}&min=${btnMin.value}`);
+    });
+
+</script>

@@ -12,7 +12,7 @@ namespace BookStore.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
-            var books = db.books.ToList(); ;
+            var books = db.books.ToList();
             return View(books);
         }
 

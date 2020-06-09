@@ -7,7 +7,7 @@ using BookStore.Models;
 
 namespace OnlineBookStore.Controllers
 {
-    [Authorize(Roles = "Admins")]
+    //[Authorize(Roles = "Admins")]
 
     public class OrderItemsController : Controller
     {

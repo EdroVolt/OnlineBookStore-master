@@ -9,7 +9,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
-    [Authorize(Roles = "Admins")]
+    //[Authorize(Roles = "Admins")]
     public class GovController : Controller { 
     
     private readonly ApplicationDbContext db;

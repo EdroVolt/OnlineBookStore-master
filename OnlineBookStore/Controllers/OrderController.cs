@@ -10,7 +10,7 @@ using System;
 
 namespace OnlineBookStore.Controllers
 {
-    [Authorize(Roles = "Admins")]
+    //[Authorize(Roles = "Admins")]
     public class OrderController : Controller
     {
         private ApplicationDbContext BookStoreDB = new ApplicationDbContext();

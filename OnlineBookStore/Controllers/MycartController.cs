@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 
 namespace OnlineBookStore.Controllers { 
               
-    [Authorize]
+    //[Authorize]
     public class MycartController : Controller
     {
         ApplicationDbContext BookStoreDB = new ApplicationDbContext();

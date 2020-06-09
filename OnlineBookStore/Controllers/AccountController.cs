@@ -12,7 +12,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class AccountController : Controller
     {
 

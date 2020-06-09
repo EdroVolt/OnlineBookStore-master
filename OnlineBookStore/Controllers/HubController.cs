@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace BookStore.Controllers
 {
-    [Authorize(Roles = "Admins")]
+    //[Authorize(Roles = "Admins")]
     public class HubController : Controller
     {
         private readonly ApplicationDbContext db;

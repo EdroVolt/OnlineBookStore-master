@@ -10,7 +10,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

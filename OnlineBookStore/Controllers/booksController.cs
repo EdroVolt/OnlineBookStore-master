@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity;
 
 namespace OnlineBookStore.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class booksController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
